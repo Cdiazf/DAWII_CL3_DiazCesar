@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a [routerLink]="['./menu']" class="nav-link active" aria-current="page" href="#">Menu</a>
+
+        <a [routerLink]="['./pregunta2']" class="nav-link active" aria-current="page" href="#">Pregunta2</a>
+        <a [routerLink]="['./pregunta3']" class="nav-link active" aria-current="page" href="#">Pregunta3</a>
+        <a [routerLink]="['./pregunta4']" class="nav-link active" aria-current="page" href="#">Pregunta4</a>
+
+      </div>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>
