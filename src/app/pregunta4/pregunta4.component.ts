@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
+import axios from "axios";
 
 @Component({
   selector: 'app-pregunta4',
@@ -9,13 +10,15 @@ import {HttpClient} from "@angular/common/http";
 export class Pregunta4Component implements OnInit{
   locations: any[] = [];
 
-  constructor(private http: HttpClient) {}
-
   ngOnInit() {
-    // Consumir la API REST GET y obtener los locations con ID PAR
-    this.http.get('https://rickandmortyapi.com/api/location')
-      .subscribe((data: any) => {
-        this.locations = data.results;
+    // Use Axios to make the HTTP request
+    axios.get('https://rickandmortyapi.com/api/location')
+      .then((response) => {
+        // Assuming the data is in response.data.results
+        this.locations = response.data.results;
+      })
+      .catch((error) => {
+        console.error('Error fetching data:', error);
       });
   }
 }
