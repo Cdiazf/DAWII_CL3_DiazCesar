@@ -1,0 +1,13 @@
+<p>pregunta2 works!</p>
+<!-- pregunta02.component.html -->
+<div>
+  <label for="cantidad">Cantidad:</label>
+  <input type="number" id="cantidad" [(ngModel)]="cantidad" />
+
+  <label for="precio">Precio:</label>
+  <input type="number" id="precio" [(ngModel)]="precio" />
+
+  <button (click)="calcularDescuento()">Calcular Descuento</button>
+
+  <p *ngIf="descuento > 0">Descuento: {{ descuento | currency }}</p>
+</div>
