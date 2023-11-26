@@ -1,0 +1,15 @@
+<p>pregunta3 works!</p>
+<!-- pregunta3.component.html -->
+<div>
+  <h2>Calculadora de Préstamos</h2>
+
+  <label for="montoPrestamo">Monto del Préstamo:</label>
+  <input type="number" id="montoPrestamo" [(ngModel)]="montoPrestamo" />
+
+  <button (click)="calcularCobro()">Calcular</button>
+
+  <div *ngIf="cuotas > 0">
+    <p>Deberá pagar en {{ cuotas }} cuotas de {{ montoCuota | currency }} cada una.</p>
+  </div>
+</div>
+
